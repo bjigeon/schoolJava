@@ -2,7 +2,6 @@ package Project;
 
 import java.io.File;
 
-
 public class CommandCd extends AbstractCommand {
 
 	public CommandCd(File currentDirectory, String commandLine) {
@@ -14,10 +13,10 @@ public class CommandCd extends AbstractCommand {
 	}
 
 	public File backDir(){
-		String[] nowDir = String.valueOf(currentDirectory).split("/");
+		String[] tmpdir = String.valueOf(currentDirectory).split("/");
 		String backdir = String.valueOf(currentDirectory);
 
-		for (int i = 0; i < (nowDir[nowDir.length - 1].length() + 1); i++){
+		for (int i = 0; i < (tmpdir[tmpdir.length - 1].length() + 1); i++){
 			backdir = backdir.substring(0, backdir.length() - 1);
 		}
 
