@@ -3,19 +3,16 @@ package Project;
 import java.io.File;
 
 public class CommandExit extends AbstractCommand {
+    public CommandExit(File currentDirectory, String commandLine) {
+        super(currentDirectory, commandLine);
+    }
 
-	public CommandExit(File currentDirectory, String commandLine) {
-		super(currentDirectory, commandLine);
-	}
+    public File executeCommand() {
+        System.out.println("Terminating simple commander");
+        return this.currentDirectory;
+    }
 
-	@Override
-	public File executeCommand() {
-		System.out.println("Terminating simple commander");
-		return this.currentDirectory;
-	}
-
-	@Override
-	public boolean isExitCondition() {
-		return true;
-	}
+    public boolean isExitCondition() {
+        return true;
+    }
 }
