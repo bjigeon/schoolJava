@@ -17,8 +17,6 @@ public class Main {
 
     static List<String> phoneInfo = new ArrayList<>();
 
-//    static List<String> CopyPhoneInfo = new ArrayList<>();
-
     public Main() throws FileNotFoundException{}
 
     public static void phoneListSort(List<String> list){
